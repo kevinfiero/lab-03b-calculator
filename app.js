@@ -13,8 +13,7 @@ calcVal.addEventListener('click', () => {
     let result;
     const indexVal = operatorVal.options[operatorVal.selectedIndex].value;
 
-    console.log(indexVal);
-
+ 
      if(Number(indexVal)===0) {
 
         result = Number(firstVal.value) + Number(secondVal.value);
@@ -32,7 +31,10 @@ calcVal.addEventListener('click', () => {
         result = Number(firstVal.value) / Number(secondVal.value);
      }
 
-    if(isNaN(result)){
+     console.log(result);
+     console.log(firstVal.value);
+     console.log(secondVal.value);
+    if(isNaN(result) || firstVal.value === "" || secondVal.value === ""){
         outputVal.textContent = 'ERROR!';
     } else{
         outputVal.textContent = result;
