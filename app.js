@@ -14,31 +14,29 @@ calcVal.addEventListener('click', () => {
     const indexVal = operatorVal.options[operatorVal.selectedIndex].value;
 
  
-     if(Number(indexVal) === 0) {
+   if (Number(indexVal) === 0) {
 
         result = Number(firstVal.value) + Number(secondVal.value);
 
-     } else if (Number(indexVal) === 1) {
+   } else if (Number(indexVal) === 1) {
 
         result = Number(firstVal.value) - Number(secondVal.value);
 
-     } else if (Number(indexVal) === 2) {
+   } else if (Number(indexVal) === 2) {
 
         result = Number(firstVal.value) * Number(secondVal.value);
 
-     } else if (Number(indexVal) === 3) {
+   } else if (Number(indexVal) === 3) {
 
         result = Number(firstVal.value) / Number(secondVal.value);
-     }
+   }
 
-     console.log(result);
-     console.log(firstVal.value);
-     console.log(secondVal.value);
-    if(isNaN(result) || firstVal.value === "" || secondVal.value === ""){
+
+   if(isNaN(result) || firstVal.value === "" || secondVal.value === ""){
         outputVal.textContent = 'ERROR!';
-    } else{
+   } else{
         outputVal.textContent = result;
-    }
-    firstVal.value = '';
-    secondVal.value = '';
+   }
+   firstVal.value = '';
+   secondVal.value = '';
 })
