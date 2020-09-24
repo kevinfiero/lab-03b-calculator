@@ -34,9 +34,9 @@ calcVal.addEventListener('click', () => {
 
     if (isNaN(result) || firstVal.value === '' || secondVal.value === ''){
         outputVal.textContent = 'ERROR!';
-    } else{
+    } else {
         outputVal.textContent = result;
-   }
-   firstVal.value = '';
-   secondVal.value = '';
-})
+    }
+    firstVal.value = '';
+    secondVal.value = '';
+});
