@@ -10,7 +10,12 @@ const outputVal = document.getElementById('output');
 calcVal.addEventListener('click', () => {  
      
     const result = Number(firstVal.value) + Number(secondVal.value);
-    outputVal.textContent = result;
+
+    if(!result){
+        outputVal.textContent = "ERROR!" 
+    } else{
+        outputVal.textContent = result;
+    }
     firstVal.value = "";
     secondVal.value ="";
 })
